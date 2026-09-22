@@ -14,22 +14,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Demo Home Page' , style: TextStyle(fontSize: 24, color: Color.fromARGB(255, 183, 13, 13))),
-        ),
-        backgroundColor: const Color.fromARGB(255, 200, 106, 137),
-        body:  Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Hello World!', style: TextStyle(fontSize: 24, 
-              color: Color.fromARGB(255, 7, 210, 68))),
-              SizedBox(height: 20),
-              Text('Welcome to my first Flutter app!', style: TextStyle(fontSize: 18, 
-              color: Color.fromARGB(255, 20, 105, 157))),
+       body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 200, 106, 137),
+              Color.fromARGB(255, 249, 249, 249)
             ],
-          ),
-        ),
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight
+          ),),
+          child: const Center(
+            child: Text( 'Hello World!' , style: TextStyle(
+              color: Colors.white,
+              fontSize: 28,
+              fontWeight: FontWeight.bold)
+            ),
+          )
+        ,)
       ),
     );
   }
