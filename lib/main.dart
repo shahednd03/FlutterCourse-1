@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; // have to import this package to use the material design widgets
-//import 'package:first_app/gradient_container.dart';
+import 'package:first_app/gradient_container.dart';
 
 
 
@@ -14,28 +14,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 200, 106, 137),
-              Color.fromARGB(255, 249, 249, 249)
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight
-          ),),
-          child: const Center(
-            child: Text( 'Hello World!' , style: TextStyle(
-              color: Colors.white,
-              fontSize: 28,
-              fontWeight: FontWeight.bold)
-            ),
-          )
-        ,)
+        body: //GradientContainer.purple(
+        GradientContainer(
+         const Color.fromARGB(255, 22, 159, 159),
+         const Color.fromARGB(255, 253, 251, 251)
+        ),
       ),
     );
   }
 }
+
+
+
+
 
 /*
 void main() {
